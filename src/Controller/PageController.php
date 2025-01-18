@@ -87,6 +87,14 @@ final class PageController extends AbstractController
 
 
 
+    #[Route('/presentation_competences', name: 'app_presentation_competences')]
+    public function presentation_competences(): Response
+    {
+        return $this->render('page/presentation_competences.html.twig', [
+            'controller_name' => 'PageController',
+        ]);
+    }
+
 
 
 

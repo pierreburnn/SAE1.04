@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation des Compétences{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+    <!-- Introduction -->
+    <section class="mb-5 py-4">
+        <h1 class="display-4 mb-4 text-center">Mes Compétences</h1>
+        <p class="lead p-4 bg-light rounded">
+            Fort de mon parcours académique et professionnel, j'ai développé une expertise dans plusieurs domaines techniques, 
+            tels que la programmation, les réseaux, et la communication. Je vous invite à découvrir mes compétences 
+            à travers des exemples concrets et des preuves de ma maîtrise.
+        </p>
+    </section>
+
+    <!-- Compétences -->
+    <section class="mb-5">
+        <!-- Programmation -->
+        <div class="card mb-5 shadow-sm">
+            <div class="card-header py-3">
+                <h2 class="mb-0">Programmation et développement logiciel</h2>
+            </div>
+            <div class="card-body p-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h5>Langages maîtrisés :</h5>
+                        <p>Python, C, HTML/CSS</p>
+                        <div class="mb-3">
+                            <strong>Projets réalisés :</strong>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Réalisation de calculs, traduction de code Python en C, analyse vidéo image par image avec Python, intégration d'API pour utiliser les outils de reconnaissance d'image d'OpenAI et de Google Gemini.</span>
+                                    <a href="https://drive.google.com/file/d/1kc5RyFbsH15h1ED6jSONwRYRHhhz7Hnb/view" class="btn btn-sm btn-outline-primary ms-3">Voir le projet</a>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Réalisation d'un micro logiciel de traitement de données réalisé en Python et Excel</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary ms-3">Voir le projet</a>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Blog Ferrari en HTML/CSS</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary ms-3">Voir le projet</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="alert alert-info">
+                            Mes projets montrent ma capacité à adapter mes connaissances à divers contextes et à résoudre des problèmes complexes en suivant un cahier des charges.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Réseaux -->
+        <div class="card mb-5 shadow-sm">
+            <div class="card-header py-3">
+                <h2 class="mb-0">Réseaux et télécommunications</h2>
+            </div>
+            <div class="card-body p-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h5>Compétences techniques :</h5>
+                        <p>Configurations VLAN, SSH, DNS et déploiement de supports</p>
+                        <div class="mb-3">
+                            <strong>Réalisations :</strong>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Simulation Packet Tracer</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary ms-3">Voir le projet</a>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Fusion de câbles</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary ms-3">Voir les détails</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="alert alert-info">
+                            Ces travaux ont renforcé mes compétences pratiques et théoriques, essentielles dans ce domaine.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Outils -->
+        <div class="card mb-5 shadow-sm">
+            <div class="card-header py-3">
+                <h2 class="mb-0">Outils et environnement collaboratif</h2>
+            </div>
+            <div class="card-body p-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h5>Outils maîtrisés :</h5>
+                        <p>GitHub, VS Code</p>
+                        <div class="mb-3">
+                            <strong>Réalisations :</strong>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Projets GitHub</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary ms-3">Voir le profil</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="alert alert-info">
+                            Maîtrise des outils modernes de collaboration et de gestion de projets pour un travail efficace en équipe
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'action -->
+    <section class="text-center py-5">
+        <div class="d-grid gap-3 d-md-block">
+            <a href="#" class="btn btn-primary btn-lg me-3 px-4">Télécharger mes preuves</a>
+            <a href="contact" class="btn btn-outline-primary btn-lg px-4">Me contacter</a>
+        </div>
+    </section>
+</div>
+{% endblock %}
