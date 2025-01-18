@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon CV{% endblock %}
+
+{% block body %}
+<div class="container py-4">
+    <!-- Titre principal -->
+    <h1 class="text-center mb-5">Mon CV</h1>
+
+    <!-- Section : Identité -->
+    <div class="mb-4 row">
+        <div class="col-md-6">
+            <fieldset>
+                <label class="form-label" for="readOnlyInputName">Nom et prénom :</label>
+                <input 
+                    class="form-control" 
+                    id="readOnlyInputName" 
+                    type="text" 
+                    value="Pierre Hiltenbrand" 
+                    readonly
+                >
+            </fieldset>
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <label class="form-label" for="readOnlyInputJob">Profession :</label>
+                <input 
+                    class="form-control" 
+                    id="readOnlyInputJob" 
+                    type="text" 
+                    value="Développeur Web" 
+                    readonly
+                >
+            </fieldset>
+        </div>
+    </div>
+
+    <!-- Section : Compétences -->
+    <div class="mb-4">
+        <h2>Compétences</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Langages de programmation :</strong>
+                <small> HTML, CSS, JavaScript, PHP</small>
+            </li>
+            <li class="list-group-item">
+                <strong>Frameworks :</strong>
+                <small> Symfony</small>
+            </li>
+            <li class="list-group-item">
+                <strong>Outils :</strong>
+                <small> Git, VS Code</small>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Section : Expérience Professionnelle : -->
+    <div class="mb-4">
+        <h2>Expérience Professionnelle</h2>
+        <div>
+            <h3>Stage au sain d'une entreprise de Développeurs</h3>
+            <p><small>Entreprise Sully Group - 2020</small></p>
+            <p>Description de vos responsabilités et réalisations...</p>
+        </div>
+    </div>
+
+    <!-- Section : Formation -->
+    <div class="mb-4">
+        <h2>Formation</h2>
+        <p><strong>BUT Informatique</strong></p>
+        <p><small>IUT de Bordeaux - En cours</small></p>
+    </div>
+
+    <!-- Section : Projets Personnels -->
+    <div class="mb-4">
+        <h2>Projets Personnels</h2>
+        <p>Décrivez ici vos projets personnels et réalisations...</p>
+        <a href="https://docs.google.com/spreadsheets/d/1Jv496ow9pkHnmdOf6ame3TP84mSrCTC9rTBN5fJwkhA/edit?usp=sharing">Lien vers votre portfolio</a>
+    </div>
+
+</div>
+{% endblock %}
