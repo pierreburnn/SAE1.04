@@ -4,34 +4,32 @@
 
 {% block body %}
 <div class="container py-4">
-    <!-- Titre principal -->
     <h1 class="text-center mb-5">Mon CV</h1>
 
-    <!-- Section : Identité -->
-    <div class="mb-4 row">
-        <div class="col-md-6">
-            <fieldset>
-                <label class="form-label" for="readOnlyInputName">Nom et prénom :</label>
-                <input 
-                    class="form-control" 
-                    id="readOnlyInputName" 
-                    type="text" 
-                    value="Pierre Hiltenbrand" 
-                    readonly
-                >
-            </fieldset>
+    <!-- En-tête : Poste visé -->
+    <div class="card mb-4 bg-primary text-white">
+        <div class="card-body text-center">
+            <h2 class="mb-0">Auditeur en cyber securité</h2>
         </div>
-        <div class="col-md-6">
-            <fieldset>
-                <label class="form-label" for="readOnlyInputJob">Profession :</label>
-                <input 
-                    class="form-control" 
-                    id="readOnlyInputJob" 
-                    type="text" 
-                    value="Développeur Web" 
-                    readonly
-                >
-            </fieldset>
+    </div>
+
+    <!-- Section : Identité -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-2"><strong>Nom et prénom :</strong><br>
+                    Pierre HILTENBRAND--BURIANNE</p>
+                    <p class="mb-2"><strong>Lieu de vie :</strong><br>
+                    Périphérie de lyon</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-2"><strong>Email :</strong><br>
+                    pierre.hiltenbrand.burianne@etu.univ-st-etienne.fr</p>
+                    <p class="mb-0"><strong>Téléphone :</strong><br>
+                    06 0 63 85 68</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -41,7 +39,7 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <strong>Langages de programmation :</strong>
-                <small> HTML, CSS, JavaScript, PHP</small>
+                <small> HTML, CSS, PYTHON</small>
             </li>
             <li class="list-group-item">
                 <strong>Frameworks :</strong>
@@ -49,7 +47,11 @@
             </li>
             <li class="list-group-item">
                 <strong>Outils :</strong>
-                <small> Git, VS Code</small>
+                <small> Github, VS Code, WireShark, Office365, PacketTracer</small>
+            </li>
+            <li class="list-group-item">
+                <strong>Langages :</strong>
+                <small> Francais, Anglais (B1)</small>
             </li>
         </ul>
     </div>
@@ -58,24 +60,32 @@
     <div class="mb-4">
         <h2>Expérience Professionnelle</h2>
         <div>
-            <h3>Stage au sain d'une entreprise de Développeurs</h3>
-            <p><small>Entreprise Sully Group - 2020</small></p>
-            <p>Description de vos responsabilités et réalisations...</p>
+            <h3>Travail dans la vente de fruits et légumes</h3>
+            <p><small>Entreprise Ducreux sur le marché de Brignais - 2024 (4 mois)</small></p>
+            <p>Vente de fruits et légumes en B to C sur le marché. Ma mission consistait également à réapprovisionner l’étal en cas de manque de fruits ou de légumes afin de garantir une présentation toujours complète et attractive pour les clients.</p>
+        </div>        
+        <div>
+            <h3>Stage au sain d'une entreprise de Développeur</h3>
+            <p><small>Entreprise Sully Group - 2020 (1 semaine)</small></p>
+            <p>Gestion du parc informatique pour les testeurs et collaboration avec un designer afin d'améliorer une applciation. Mise en place via Microsoft Azure d’un système de gestion du parc pour sécuriser les appareils à l’aide de mots de passe complexes. Configuration de la géolocalisation des appareils et mise en place de la gestion des applications à distance.</p>
+        </div>
+        <div>
+            <h3>Stage au sain d'une entreprise de Développeur</h3>
+            <p><small>Entreprise Sully Group - 2019 (1 semaine)</small></p>
+            <p>Gestion du parc des appareils dédiés au test des applications. Récupération des identifiants de chaque appareil pour les référencer dans un fichier Excel. Mise en place d’un système de partage de fichiers permettant aux testeurs et développeurs de renseigner quand et où les appareils sont utilisés, assurant ainsi un suivi précis.</p>
         </div>
     </div>
 
     <!-- Section : Formation -->
     <div class="mb-4">
         <h2>Formation</h2>
-        <p><strong>BUT Informatique</strong></p>
-        <p><small>IUT de Bordeaux - En cours</small></p>
+        <p><strong>BUT Réseaux et Télécommunications</strong></p>
+        <p><small>IUT de Roanne - En cours</small></p>
     </div>
 
-    <!-- Section : Projets Personnels -->
-    <div class="mb-4">
-        <h2>Projets Personnels</h2>
-        <p>Décrivez ici vos projets personnels et réalisations...</p>
-        <a href="https://docs.google.com/spreadsheets/d/1Jv496ow9pkHnmdOf6ame3TP84mSrCTC9rTBN5fJwkhA/edit?usp=sharing">Lien vers votre portfolio</a>
+    <!-- Bouton de redirection -->
+    <div class="text-center mt-5 mb-4">
+        <a href="telechargement" class="btn btn-primary btn-lg">Télécharger le CV</a>
     </div>
 
 </div>
