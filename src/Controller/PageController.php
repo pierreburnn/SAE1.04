@@ -128,7 +128,7 @@ final class PageController extends AbstractController
             );
             // Retourner la réponse de téléchargement du fichier
             return $response;
-            
+
             // Si le téléchargement a réussi, envoyer l'email
             $date = new \DateTime();
             $formattedDate = $date->format('d F Y');
@@ -156,4 +156,6 @@ final class PageController extends AbstractController
             return $this->redirectToRoute('app_telechargement');
         }
     }
+
+
 }
