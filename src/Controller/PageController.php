@@ -106,44 +106,51 @@ final class PageController extends AbstractController
         $lastname = $request->request->get('lastname');
         $email = $request->request->get('email');
         
+        // Validation des champs
         if (!$firstname || !$lastname || !$email) {
             $this->addFlash('error', 'Tous les champs sont requis');
             return $this->redirectToRoute('app_telechargement');
         }
-
-        $date = new \DateTime();
-        $formattedDate = $date->format('d F Y');
-
-        $emailBody = sprintf(
-            "Monsieur/Madame %s %s a téléchargé votre CV le %s",
-            $firstname,
-            $lastname,
-            $formattedDate
-        );
-
-        $email = (new Email())
-            ->from('votre-email@domaine.com')
-            ->to('pierre.hiltenbrand.burianne@etu.univ-st-etienne.fr')
-            ->subject('Nouveau téléchargement de CV')
-            ->text($emailBody);
-
+    
+        // Télécharger le CV
         try {
-            $mailer->send($email);
-            
             $filePath = $this->getParameter('kernel.project_dir') . '/public/CV.pdf';
             
             if (!file_exists($filePath)) {
                 throw new \Exception('Le fichier PDF n\'existe pas');
             }
-            
+    
+            // Crée la réponse pour télécharger le fichier
             $response = new BinaryFileResponse($filePath);
             $response->setContentDisposition(
                 ResponseHeaderBag::DISPOSITION_ATTACHMENT,
                 'CV_Pierre_HILTENBRAND.pdf'
             );
-            
+            // Retourner la réponse de téléchargement du fichier
             return $response;
-
+            
+            // Si le téléchargement a réussi, envoyer l'email
+            $date = new \DateTime();
+            $formattedDate = $date->format('d F Y');
+            $emailBody = sprintf(
+                "Monsieur/Madame %s %s a téléchargé votre CV le %s",
+                $firstname,
+                $lastname,
+                $formattedDate
+            );
+    
+            // Création de l'email
+            $emailNotification = (new Email())
+                ->from('votre-email@domaine.com')
+                ->to('pierre.hiltenbrand.burianne@etu.univ-st-etienne.fr')
+                ->subject('Nouveau téléchargement de CV')
+                ->text($emailBody);
+    
+            // Envoi de l'email
+            $mailer->send($emailNotification);
+    
+            
+    
         } catch (\Exception $e) {
             $this->addFlash('error', 'Une erreur est survenue: ' . $e->getMessage());
             return $this->redirectToRoute('app_telechargement');
