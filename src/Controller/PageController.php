@@ -130,7 +130,7 @@ final class PageController extends AbstractController
         try {
             $mailer->send($email);
             
-            $filePath = $this->getParameter('kernel.project_dir') . '/public/SAE14 présentation.pdf';
+            $filePath = $this->getParameter('kernel.project_dir') . '/public/CV.pdf';
             
             if (!file_exists($filePath)) {
                 throw new \Exception('Le fichier PDF n\'existe pas');
